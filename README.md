@@ -8,7 +8,7 @@ I started from scratch so I am making a temp readme to help me with steps I need
 - [x] Build server (& install express, body-parser and cors)
 - [x] Install webpack
 - [x] Install babel
-- [ ] Install html-webpack-plugin, webpack-dev-server and clean-webpack-plugin
+- [x] Install html-webpack-plugin, webpack-dev-server and clean-webpack-plugin
 - [ ] Install style-loader, node-sass, css-loader, sass-loader
 - [ ] Create SASS and style the entire page
 
