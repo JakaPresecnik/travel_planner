@@ -1,0 +1,30 @@
+{
+  "name": "udacity-fend-capstone",
+  "version": "1.0.0",
+  "description": "Travel App",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JakaPresecnik/Udacity-FEND-Capstone.git"
+  },
+  "keywords": [
+    "Udacity",
+    "FEND",
+    "capstone",
+    "project"
+  ],
+  "author": "Jaka Presecnik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JakaPresecnik/Udacity-FEND-Capstone/issues"
+  },
+  "homepage": "https://github.com/JakaPresecnik/Udacity-FEND-Capstone#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}
