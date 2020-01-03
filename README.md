@@ -11,6 +11,7 @@ I started from scratch so I am making a temp readme to help me with steps I need
 - [x] Install html-webpack-plugin, webpack-dev-server and clean-webpack-plugin
 
 ### Part 2:
-- [ ] Make a jest '__test__' folder and continue there
+- [x] Install jest and supertest, and make a jest '__test__' folder and a sample test
+- [x] Test the server
 - [ ] Install style-loader, node-sass, css-loader, sass-loader
 - [ ] Create SASS and style the entire page
