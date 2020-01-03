@@ -18,3 +18,5 @@ I started from scratch so I am making a temp readme to help me with steps I need
 - [x] Decide on fonts(google.fonts) and colors(paletton) and create variables in sass file
 - [ ] Style the entire page
 - [ ] Comment out content that is visible only when user submits to API
+
+### Part 3

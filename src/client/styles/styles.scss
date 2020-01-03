@@ -10,10 +10,48 @@ $prim-col: #89a638;
 $prim-col-light: #a7c063;
 $prim-col-xxlight: #c5d793;
 $prim-col-dark: #708f19;
-$prim-col-xxdark: #587701
+$prim-col-xxdark: #587701;
 $sec-col: #3e9131;
 $sec-col-light: #88bc80;
 $sec-col-dark: #0f6801;
 $thr-col: #afa93b;
 $thr-col-light: #e3df9b;
 $thr-col-dark: #7e7801;
+
+body {
+  padding: 0;
+  margin: 0;
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: $sec-col-dark;
+    font-family: $head-font;
+    height: 100vh;
+    font-size: 1.8em;
+    color: $sec-col-light;
+    text-align: center;
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li {
+        padding: 0.5em;
+        a {
+          font-family: $sec-font;
+          color: $sec-col-light;
+          text-decoration: none;
+          padding: 0.5em 1em;
+          &:hover {
+            background-color: $sec-col;
+            color: $prim-col-xxlight;
+          }
+          &:active {
+            background-color: $prim-col;
+            color: $prim-col-light;
+          }
+        }
+      }
+    }
+  }
+}
