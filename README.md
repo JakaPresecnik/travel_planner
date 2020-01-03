@@ -14,6 +14,6 @@ I started from scratch so I am making a temp readme to help me with steps I need
 - [x] Install jest and supertest, and make a `__tests__` folder and a sample test
 - [x] Test the server
 - [x] make a favicon.ico to get rid of error (favicon.cc)
-- [ ] Install style-loader, node-sass, css-loader, sass-loader
+- [x] Install style-loader, node-sass, css-loader, sass-loader
 - [ ] Create SASS and style the entire page
 - [ ] Comment out content that is visible only when user submits to API
