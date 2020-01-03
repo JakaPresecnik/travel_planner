@@ -1,15 +1,15 @@
 var request = require('supertest');
-
+// Sample test to see if jest works
 describe('Sample Test', () => {
   it('should test that true === true', () => {
     expect(true).toBe(true)
   })
 })
-
+//Server test
 describe('loading express', function () {
   var server;
   beforeEach(function () {
-    server = require('../server/index.js');
+    server = require('../src/server/index.js');
   });
   afterEach(function () {
     server.close();

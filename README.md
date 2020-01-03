@@ -11,7 +11,9 @@ I started from scratch so I am making a temp readme to help me with steps I need
 - [x] Install html-webpack-plugin, webpack-dev-server and clean-webpack-plugin
 
 ### Part 2:
-- [x] Install jest and supertest, and make a jest '__test__' folder and a sample test
+- [x] Install jest and supertest, and make a `__tests__` folder and a sample test
 - [x] Test the server
+- [x] make a favicon.ico to get rid of error (favicon.cc)
 - [ ] Install style-loader, node-sass, css-loader, sass-loader
 - [ ] Create SASS and style the entire page
+- [ ] Comment out content that is visible only when user submits to API

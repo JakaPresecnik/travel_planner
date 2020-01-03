@@ -5,7 +5,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
   mode: 'development',
-  entry: './website/app.js',
+  entry: './src/client/js/app.js',
   module: {
     rules: [{
       test:'/\.js$/',
@@ -15,7 +15,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './website/index.html',
+      template: './src/client/views/index.html',
       filename:'./index.html'
     }),
     new CleanWebpackPlugin() //CHECK FOR OPTIONS LATER ON
