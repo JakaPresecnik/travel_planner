@@ -9,8 +9,8 @@ I started from scratch so I am making a temp readme to help me with steps I need
 - [x] Install webpack
 - [x] Install babel
 - [x] Install html-webpack-plugin, webpack-dev-server and clean-webpack-plugin
-- [ ] Install style-loader, node-sass, css-loader, sass-loader
-- [ ] Create SASS and style the entire page
 
 ### Part 2:
 - [ ] Make a jest '__test__' folder and continue there
+- [ ] Install style-loader, node-sass, css-loader, sass-loader
+- [ ] Create SASS and style the entire page
