@@ -32,16 +32,21 @@ body {
     color: $sec-col-light;
     text-align: center;
     ul {
+      background-color: $sec-col;
       list-style: none;
       margin: 0;
       padding: 0;
       li {
+        border: 1px solid $sec-col-dark;
         padding: 0.5em;
         a {
+          display: block;
           font-family: $sec-font;
-          color: $sec-col-light;
+          font-size: 1.2em;
+          font-weight: 700;
+          color: $sec-col-dark;
           text-decoration: none;
-          padding: 0.5em 1em;
+          padding: 0.4em 1em;
           &:hover {
             background-color: $sec-col;
             color: $prim-col-xxlight;
@@ -49,9 +54,5 @@ body {
           &:active {
             background-color: $prim-col;
             color: $prim-col-light;
-          }
-        }
-      }
-    }
-  }
+  }}}}}
 }
