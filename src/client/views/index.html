@@ -22,15 +22,21 @@
 <main>
   <section id="form-space">
     <form action=""></form>
-    I'm travelling to: <input id="destination" type="text" placeholder="e.g. London">
-    Departing:<input id="depart" type="text" placeholder="gg.aa.yyyy">
-    Returning:<input id="return" type="text" placeholder="gg.aa.yyyy">
-    <input type="submit" value="Add trip">
+    <label for="destination">
+      Travelling to: <input id="destination" type="text" placeholder="e.g. London">
+    </label>
+    <label for="depart">
+      Departing:<input id="depart" type="text" placeholder="gg.aa.yyyy">
+    </label>
+    <label for="return">
+      Returning:<input id="return" type="text" placeholder="gg.aa.yyyy">
+    </label>
+    <input id="submit" type="submit" value="Add trip">
   </section>
   <section id="trips">
     <h2>My trips:</h2>
     <div class="saved">
-      <img src="" alt="">
+      <img src="https://www.syncron.com/wp-content/uploads/2017/03/img-placeholder.png" alt="">
       <div>
         <h3>My trip to: </h3>
         <h3>Departing: </h3>
