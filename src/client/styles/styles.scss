@@ -31,22 +31,32 @@ body {
     font-size: 1.7em;
     color: $sec-col-light;
     text-align: center;
+    h1 {
+      line-height: 1em;
+      margin: 0.5em;
+    }
     ul {
-      background-color: $sec-col;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      background-color: $sec-col-dark;
       list-style: none;
       margin: 0;
       padding: 0;
       li {
-        border: 1px solid $sec-col-dark;
-        padding: 0.5em;
+        width: 100%;
+        max-width: 200px;
+        background: $sec-col-light;
+        border: 2px solid $sec-col-dark;
+        padding: 0;
         a {
           display: block;
           font-family: $sec-font;
-          font-size: 1.1em;
+          font-size: 1em;
           font-weight: 700;
           color: $sec-col-dark;
           text-decoration: none;
-          padding: 0.3em 1em;
+          padding: 0.2em 1em;
           &:hover {
             background-color: $sec-col;
             color: $prim-col-xxlight;
@@ -56,10 +66,11 @@ body {
             color: $prim-col-light;
   }}}}}
   main {
+    min-height: 90vh;
     background-color: $prim-col-light;
-    #form-space {
+    section:first-child form{
       font-family: $prim-font;
-      font-size: 1.3em;
+      font-size: 1.2em;
       text-align: center;
       height: 100vh;
       display: flex;
@@ -73,6 +84,8 @@ body {
         background-color: $prim-col-xxlight;
         border: 1px solid $thr-col;
         height: 2em;
+        width: 40%;
+        max-width: 225px;;
         font-family: $prim-font;
         font-size: 1em;
         &:hover {

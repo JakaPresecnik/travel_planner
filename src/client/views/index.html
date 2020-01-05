@@ -9,8 +9,8 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-<header>
-  <h1><i class="fa fa-plane" aria-hidden="true"></i><br>Travel Planer<br><i class="fa fa-suitcase" aria-hidden="true"></i></h1>
+<header id="header">
+  <h1><i class="fa fa-plane" aria-hidden="true"></i> <br> Travel Planer <br> <i class="fa fa-suitcase" aria-hidden="true"></i></h1>
   <nav>
     <ul>
       <li><a href="#">Home</a></li>
@@ -21,7 +21,7 @@
 </header>
 <main>
   <section id="form-space">
-    <form action=""></form>
+    <form id="travel-form" action="">
     <label for="destination">
       Travelling to: <input id="destination" type="text" placeholder="e.g. London">
     </label>
@@ -32,14 +32,15 @@
       Returning:<input id="return" type="text" placeholder="gg.aa.yyyy">
     </label>
     <input id="submit" type="submit" value="Add trip">
+    </form>
   </section>
   <section id="trips">
     <h2>My trips:</h2>
     <div class="saved">
       <img src="https://www.syncron.com/wp-content/uploads/2017/03/img-placeholder.png" alt="">
       <div class="header-saved-trip">
-        <p>My trip to: </p>
-        <p>Departing: </p>
+        <p>My trip to: Havana, Cuba</p>
+        <p>Departing: 6.1.2020</p>
       </div>
       <div class="flight-info">
         <h4>Flight info:</h4>
@@ -60,8 +61,8 @@
     <div class="saved">
       <img src="https://www.syncron.com/wp-content/uploads/2017/03/img-placeholder.png" alt="">
       <div class="header-saved-trip">
-        <p>My trip to: </p>
-        <p>Departing: </p>
+        <p>My trip to: 	Hanga Roa, Easter Island</p>
+        <p>Departing: 30.12.2009</p>
       </div>
       <div class="flight-info">
         <h4>Flight info:</h4>
@@ -74,8 +75,7 @@
         <p>Trip is xxx days away</p>
       </div>
       <div class="trip-weather">
-        <p>Typical weather for then is:</p>
-        <p>Cloudy between 0 - 20°C</p>
+        <p>Typical weather for then is: <br>Cloudy between 0 - 20°C</p>
       </div>
     </div>
 
