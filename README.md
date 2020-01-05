@@ -11,6 +11,12 @@ I started from scratch so I am making a temp readme to help me with steps I need
 - [x] Install html-webpack-plugin, webpack-dev-server and clean-webpack-plugin
 
 ### Part 2:
-- [ ] Make a jest '__test__' folder and continue there
-- [ ] Install style-loader, node-sass, css-loader, sass-loader
-- [ ] Create SASS and style the entire page
+- [x] Install jest and supertest, and make a `__tests__` folder and a sample test
+- [x] Test the server
+- [x] make a favicon.ico to get rid of error (favicon.cc)
+- [x] Install style-loader, node-sass, css-loader, sass-loader
+- [x] Decide on fonts(google.fonts) and colors(paletton) and create variables in sass file
+- [ ] Style the entire page for mobile onto higher devices
+- [ ] Comment out content that is visible only when user submits to API
+
+### Part 3
