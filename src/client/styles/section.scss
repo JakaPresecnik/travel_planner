@@ -1,0 +1,71 @@
+/* Font variables from google fonts */
+$head-font: 'Indie Flower', cursive;
+$prim-font: 'Lato', sans-serif;
+$sec-font: 'Caveat', cursive;
+$spare-font: 'Fjalla One', sans-serif;
+
+/* Color variables: with the help of paletton.com - add this site to bookmarks somewhere on other PCs! */
+$prim-col: #89a638;
+$prim-col-light: #a7c063;
+$prim-col-xxlight: #c5d793;
+$prim-col-dark: #708f19;
+$prim-col-xxdark: #587701;
+$sec-col: #3e9131;
+$sec-col-light: #88bc80;
+$sec-col-dark: #0f6801;
+$thr-col: #afa93b;
+$thr-col-light: #e3df9b;
+$thr-col-dark: #7e7801;
+
+
+#trips {
+  min-height: 100vh;
+  padding: 1em;
+  line-height: 0.8em;
+  h2 {
+    font-family: $sec-font;
+  }
+  .saved {
+    font-family: $prim-font;
+    background-color: $prim-col-xxlight;
+    border: 1px solid $thr-col;
+    border-radius: 10px;
+    padding: 1em;
+    margin: 1em;
+    img {
+      width: 100%;
+    }
+    .header-saved-trip {
+      font-weight: 700;
+      border-bottom: 1px solid $thr-col-light;
+      margin: 0.5em;
+    }
+    .flight-info {
+      display: none;
+    }
+    button {
+      background-color: $thr-col-dark;
+      color: $thr-col-light;
+      margin: 0.5em;
+      padding: 0.5em;
+      font-family: $prim-font;
+      border: 1px solid $thr-col;
+      &:hover {
+        background-color: $thr-col;
+        cursor: pointer;
+      }
+      &:active {
+        color: $thr-col-dark;
+        padding: 0.2em 0.5em;
+      }
+    }
+    .days-away {
+      font-size: 0.9em;
+      margin-bottom: 1.3em;
+    }
+    .trip-weather {
+      font-size: 0.9em;
+      line-height: 0.3em;
+    }
+  }
+}

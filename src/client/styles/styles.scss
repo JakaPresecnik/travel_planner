@@ -91,22 +91,18 @@ body {
         &:hover {
           background-color: $thr-col;
           cursor: pointer;
-      }}
-    }
-    #trips {
-      min-height: 100vh;
-      font-family: $sec-font;
-      padding: 1em;
-      line-height: 0.8em;
-      .saved {
-        background-color: $prim-col-xxlight;
-        border: 1px solid $thr-col;
-        border-radius: 10px;
-        padding: 1em;
-        img {
-          width: 100%;
+        }
+        &:active {
+          color: $thr-col-dark;
         }
       }
     }
+  }
+  footer {
+    background: $sec-col-dark;
+    font-family: $head-font;
+    color: $prim-col-xxlight;
+    text-align: center;
+    padding: 0.2em;
   }
 }
