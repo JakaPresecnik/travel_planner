@@ -66,5 +66,26 @@
 }
 
 @media only screen and(min-width: 1200px) {
-
+  .saved {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 2fr 1fr 1fr 2fr;
+    grid-template-areas: "img hst"
+    "img btn"
+    "img da"
+    "img tw";
+    align-content: space-between;
+    p {
+      margin: 8px;
+    }
+    img {
+      grid-area: img;
+    }
+  }
+  #form-space form{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    input {
+      width: 160px;
+    }
+  }
 }
