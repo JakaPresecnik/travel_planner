@@ -16,7 +16,7 @@ I started from scratch so I am making a temp readme to help me with steps I need
 - [x] make a favicon.ico to get rid of error (favicon.cc)
 - [x] Install style-loader, node-sass, css-loader, sass-loader
 - [x] Decide on fonts(google.fonts) and colors(paletton) and create variables in sass file
-- [ ] Style the entire page for mobile onto higher devices
-- [ ] Comment out content that is visible only when user submits to API
+- [x] Style the entire page for mobile onto higher devices
+- [x] Comment out content that is visible only when user submits to API
 
 ### Part 3
