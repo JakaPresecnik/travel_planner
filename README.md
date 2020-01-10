@@ -24,3 +24,8 @@ I started from scratch so I am making a temp readme to help me with steps I need
 - [x] Install service workers
 - [x] Minify CSS and HTML in production
 - [x] Make a event listener function in formHandler file
+
+
+### Part 4
+- [x] Install sweetalert (https://sweetalert.js.org/)
+- [x] create API call to geonames
