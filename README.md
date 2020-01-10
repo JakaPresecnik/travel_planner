@@ -20,3 +20,7 @@ I started from scratch so I am making a temp readme to help me with steps I need
 - [x] Comment out content that is visible only when user submits to API
 
 ### Part 3
+- [x] Install CSS extract plugin
+- [x] Install service workers
+- [x] Minify CSS and HTML in production
+- [x] Make a event listener function in formHandler file

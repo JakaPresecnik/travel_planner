@@ -23,15 +23,15 @@
   <section id="form-space">
     <form id="travel-form" action="">
     <label for="destination">
-      Travelling to: <input id="destination" type="text" placeholder="e.g. London">
+      Travelling to: <input id="destination" type="text" placeholder="e.g. London" required>
     </label>
     <label for="depart">
-      Departing:<input id="depart" type="text" placeholder="gg.aa.yyyy">
+      Departing:<input id="depart" type="text" placeholder="gg.aa.yyyy" required>
     </label>
     <label for="return">
       Returning:<input id="return" type="text" placeholder="gg.aa.yyyy">
     </label>
-    <input id="submit" type="submit" value="Add trip">
+    <input id="submit" type="submit" value="Add trip" onclick="return Client.submitHandler(event)"">
     </form>
   </section>
   <section id="trips">
