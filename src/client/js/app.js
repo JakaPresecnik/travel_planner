@@ -9,14 +9,9 @@ const getPlaces = async(city) => {
   try {
     const data = await res.json()
     if(data.geonames.length === 0) {
-      swal("Oops", "The place does not exist!", "warning")
+      swal("Oops!", "The place does not exist!", "warning")
     }else {
-/**///      console.log(data.geonames[0].countryName + ', ' + data.geonames[0].lat + ', ' + data.geonames[0].lng)
-      return data
-      /* you need: - lan (data.geonames[0].lat)
-                   - lng (data.geonames[0].lng)
-                   - countryName (data.geonames[0].countryName)
-      */
+      return data.geonames[0]
     }
   }catch (error) {
     console.log('error', error)
@@ -28,16 +23,21 @@ const tillDeparture = (leavingDate, today) => {
   let date1 = new Date(today)
   let date2 = new Date(leavingDate)
   let daysDifference = (new Date(date2 - date1))/1000/60/60/24
-/**/  console.log(daysDifference)
+  if(daysDifference < 0) {
+    swal('Hey!', 'You have missed the trip!', 'warning')
+  }else if(daysDifference === 0) {
+    swal('Hey!', 'Your trip starts today!', 'warning')
+  }else {
+    return daysDifference
+  }
 }
 
 // Getting weather for entered date (Time machine request)
-const darkSkyWeather = async(lat, lng) => {
-  const res = await fetch (darkskyUrl+darkskyApiKey+lat+','+lng)
+const darkSkyWeather = async(lat, lng, time) => {
+  const res = await fetch (darkskyUrl+darkskyApiKey+lat+','+lng+','+time)
   try {
     const data = await res.json()
-/**/    console.log(data)
-    return data
+    return data.daily.data[0]
   }catch (error) {
     console.log('error', error)
   }
