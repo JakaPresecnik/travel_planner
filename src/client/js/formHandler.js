@@ -1,5 +1,5 @@
 import swal from 'sweetalert'
-import { getPlaces, darkSkyWeather, tillDeparture } from './app'
+import { getPlaces, darkSkyWeather, pixabayImage, tillDeparture } from './app'
 
 function submitHandler(event) {
   event.preventDefault()
@@ -20,6 +20,8 @@ function submitHandler(event) {
       console.log(data)
     })
   })
+
+  Client.pixabayImage(destination)
 
   Client.tillDeparture(departing, today)
 

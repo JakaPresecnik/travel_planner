@@ -2,6 +2,9 @@ const geonamesUrl = 'http://api.geonames.org/searchJSON?q=' //placename can be r
 const geonamesApiKey = '&username=jckfck'
 const darkskyUrl = 'https://api.darksky.net/forecast/'
 const darkskyApiKey = '3826e3455ef6a6ce57511e90006dd29c/'
+const pixabayUrl = 'https://pixabay.com/api/?key='
+const pixabayApiKey = '14820008-829cc6aef01ac87c9b25676f8'
+const pixabayAdditonal ='&image_type=photo&orientation=horizontal'
 
 // Getting JSON data from geonames
 const getPlaces = async(city) => {
@@ -43,8 +46,21 @@ const darkSkyWeather = async(lat, lng, time) => {
   }
 }
 
+//getting the image of the city url from pixabay
+const pixabayImage = async(place) => {
+  const res = await fetch (pixabayUrl+pixabayApiKey+'&q='+place)
+  try {
+    const data = await res.json()
+    console.log(data.hits[0].webformatURL)
+    return data
+  }catch (error) {
+    console.log('error', error)
+  }
+}
+
 export {
   getPlaces,
   darkSkyWeather,
+  pixabayImage,
   tillDeparture
  }
