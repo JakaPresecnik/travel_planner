@@ -95,6 +95,9 @@ body {
         &:focus {
           background-color: $thr-col-light;
         }
+        &::-webkit-inner-spin-button {
+          display: none;
+        }
       }
       #submit {
         background-color: $thr-col-dark;
