@@ -34,3 +34,8 @@ I started from scratch so I am making a temp readme to help me with steps I need
 
 ### Part 5
 - [ ] test all API calls
+- [ ] create an object that holds the data we want
+- [ ] make a function that builds UI for the trip we submited
+- [ ] create an object on the server that will hold data
+- [ ] send data to server function
+- [ ] get the data already stored to our html
