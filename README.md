@@ -43,4 +43,4 @@ I started from scratch so I am making a temp readme to help me with steps I need
 ### Part 6
 - [ ] make an API call to Rest Countries
 - [ ] send data (including Rest API data) to server function
-- [ ] get the data already stored to the clent side
+- [ ] get the data already stored to the clent side (update DOM)
