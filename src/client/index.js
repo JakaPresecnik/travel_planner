@@ -3,12 +3,15 @@ import './styles/section.scss';
 import './styles/small.scss';
 
 import { getPlaces, darkSkyWeather, pixabayImage, tillDeparture } from './js/app'
-import { submitHandler } from './js/formHandler'
+import { submitHandler, resetForm } from './js/formHandler'
+import { createPopup } from './js/manipulatingDOM'
 
 export {
   getPlaces,
   darkSkyWeather,
   submitHandler,
   pixabayImage,
-  tillDeparture
+  tillDeparture,
+  createPopup,
+  resetForm
  }

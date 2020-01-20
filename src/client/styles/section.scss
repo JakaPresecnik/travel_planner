@@ -25,7 +25,7 @@ section:nth-child(2) {
   h2 {
     font-family: $sec-font;
   }
-  .saved, .popup{
+  .saved, #popup{
     font-family: $prim-font;
     background-color: $prim-col-xxlight;
     border: 1px solid $thr-col;
@@ -70,10 +70,11 @@ section:nth-child(2) {
   }
 }
 
-.popup {
+#popup {
   position: fixed;
   text-align: center;
-  top: 1em;
+  top: 1%;
   left: 1%;
   right: 1%;
+  box-shadow: 5px 10px 50px 0 rgba(0, 0, 0, 0.4), 5px 10px 50px 0 rgba(0, 0, 0, 0.4);
 }

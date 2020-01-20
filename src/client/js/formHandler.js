@@ -1,5 +1,6 @@
 import swal from 'sweetalert'
 import { getPlaces, darkSkyWeather, pixabayImage, tillDeparture } from './app'
+import { createPopup } from './manipulatingDOM'
 
 let d = new Date()
 let today = d.getFullYear() +'-'+ d.getMonth() + 1 +'-'+ d.getDate()
@@ -30,16 +31,24 @@ function submitHandler(event) {
       travelTo.tempLow = Math.round(toC(data.temperatureLow))
       travelTo.weather = data.summary
       travelTo.weatherIcon = `./src/client/img/${data.icon}.svg`
+      createPopup(travelTo, daysAway)
+      console.log(travelTo)
     })
   })
 
   Client.pixabayImage(destination)
-    .then((data) => travelTo.image = data)
+    .then((data) => {
+      travelTo.image = data
+    })
 
-  Client.tillDeparture(departing, today)
-
+  let daysAway = Client.tillDeparture(departing, today)
 
 }
+
+const resetForm = (event) => {
+  document.getElementById('popup').remove()
+}
+
 const toC = (tempF) => (tempF - 32) * 1.8
 
-export { submitHandler }
+export { submitHandler, resetForm }

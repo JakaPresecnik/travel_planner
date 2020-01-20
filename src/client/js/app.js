@@ -51,8 +51,7 @@ const pixabayImage = async(place) => {
   const res = await fetch (pixabayUrl+pixabayApiKey+'&q='+place)
   try {
     const data = await res.json()
-    console.log(data.hits[0].webformatURL)
-    return data
+    return data.hits[0].webformatURL
   }catch (error) {
     console.log('error', error)
   }

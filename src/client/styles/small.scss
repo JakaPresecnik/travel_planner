@@ -1,5 +1,5 @@
 @media only screen and (min-width: 600px) and (max-width: 899px) {
-  .saved, .popup{
+  .saved, #popup{
     display: grid;
     grid-template-columns: 3fr 2fr;
     grid-template-rows: 2fr 1fr 1fr 2fr;
@@ -63,7 +63,7 @@
       grid-area: 1/span 2;
     }
   }
-  .popup {
+  #popup {
     top: 40%;
     left: 50%;
     /* bring your own prefixes */
