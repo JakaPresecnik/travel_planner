@@ -1,3 +1,6 @@
+//storing data array
+let savedTrips = [];
+
 const express = require('express');
 const app = express();
 
@@ -16,5 +19,13 @@ app.get('/', function (req, res) {
 });
 
 const server = app.listen(8010, () => console.log('Server running on localhost port 8010'));
+
+app.post('/addEntry', addEntry);
+
+//function that stores data
+function addEntry(req,res) {
+  savedTrips.push(req.body);
+  console.log(savedTrips);
+}
 
 module.exports = server;

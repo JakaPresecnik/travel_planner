@@ -1,3 +1,4 @@
+// The name of the file says it all
 const createPopup = (submitObject, daysLeft) => {
   const popupObject = document.getElementById('trips')
   popupObject.innerHTML = `
@@ -8,7 +9,7 @@ const createPopup = (submitObject, daysLeft) => {
         <p>On ${submitObject.leaveDate} ?</p>
       </div>
       <div class="buttons">
-        <button>Save Trip</button>
+        <button onclick="return Client.postToServer(event)">Save Trip</button>
         <button onclick="return Client.resetForm(event)">Reset Submission</button>
       </div>
       <div class="days-away">

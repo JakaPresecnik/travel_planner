@@ -35,9 +35,12 @@ I started from scratch so I am making a temp readme to help me with steps I need
 ### Part 5
 - [x] test all three API calls
 - [x] create an object that holds the data we want
-  - [x] greate a weather icon function and add the url to object
+- [x] greate a weather icon function and add the url to object (integrated once user saves the trip to server)
 - [x] make a function that builds UI for the trip we submited
 - [x] make a function that resets our submission
-- [ ] create an object on the server that will hold data
-- [ ] send data to server function
+- [x] create an object on the server that will hold data
+
+### Part 6
+- [ ] make an API call to Rest Countries
+- [ ] send data (including Rest API data) to server function
 - [ ] get the data already stored to the clent side
