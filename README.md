@@ -33,7 +33,7 @@ I started from scratch so I am making a temp readme to help me with steps I need
 - [x] create API call to Pixabay
 
 ### Part 5
-- [ ] test all API calls
+- [x] test all three API calls
 - [ ] create an object that holds the data we want
 - [ ] make a function that builds UI for the trip we submited
 - [ ] create an object on the server that will hold data

@@ -48,6 +48,7 @@
     "css-loader": "^3.4.0",
     "html-webpack-plugin": "^3.2.0",
     "jest": "^24.9.0",
+    "jest-fetch-mock": "^3.0.1",
     "node-sass": "^4.13.1",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "sass-loader": "^8.0.0",
@@ -59,8 +60,12 @@
   },
   "jest": {
     "testEnvironment": "node",
+    "automock": false,
     "coveragePathIgnorePatterns": [
       "/node_modules/"
+    ],
+    "setupFiles": [
+      "./setupJest.js"
     ]
   }
 }
