@@ -20,15 +20,23 @@ app.get('/', function (req, res) {
 
 const server = app.listen(8010, () => console.log('Server running on localhost port 8010'));
 
-app.get('/all', (req, res) => res.send(savedTrips));
+
 app.post('/add', (res, req) => res.send('POST recieved!'));
 
 app.post('/addEntry', addEntry);
+app.post('/remove', removeEntry);
 
 //function that stores data
 function addEntry(req,res) {
   savedTrips.push(req.body);
   console.log(savedTrips);
 }
+//removes entry
+function removeEntry(req,res) {
+  savedTrips.splice(req.body.index, 1);
+  console.log(req.body.index);
+}
+
+app.get('/all', (req, res) => res.send(savedTrips));
 
 module.exports = server;
