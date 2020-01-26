@@ -2,11 +2,12 @@
   .saved, #popup{
     display: grid;
     grid-template-columns: 3fr 2fr;
-    grid-template-rows: 2fr 1fr 1fr 2fr;
+    grid-template-rows: 2fr 1fr 1fr;
     grid-template-areas: "img hst"
     "img btn"
     "img da"
-    "img tw";
+    "img tw"
+    "dt dt";
     align-content: space-between;
     p {
       margin: 8px;
@@ -14,6 +15,10 @@
     img {
       grid-area: img;
     }
+  }
+  .details {
+    grid-area: dt;
+    text-align: justify;
   }
 }
 

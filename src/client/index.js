@@ -4,7 +4,7 @@ import './styles/small.scss';
 
 import { getPlaces, darkSkyWeather, pixabayImage, tillDeparture, countryDetails } from './js/app'
 import { submitHandler, resetForm, postToServer } from './js/formHandler'
-import { createPopup } from './js/manipulatingDOM'
+import { createPopup, buildTrips } from './js/manipulatingDOM'
 
 export {
   getPlaces,
@@ -15,5 +15,6 @@ export {
   createPopup,
   resetForm,
   countryDetails,
+  buildTrips,
   postToServer
  }

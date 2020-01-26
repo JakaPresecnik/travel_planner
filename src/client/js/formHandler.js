@@ -1,6 +1,6 @@
 import swal from 'sweetalert'
 import { getPlaces, darkSkyWeather, pixabayImage, tillDeparture, countryDetails } from './app'
-import { createPopup } from './manipulatingDOM'
+import { createPopup, buildTrips } from './manipulatingDOM'
 
 let d = new Date()
 let today = d.getFullYear() +'-'+ d.getMonth() + 1 +'-'+ d.getDate()
@@ -9,6 +9,7 @@ let today = d.getFullYear() +'-'+ d.getMonth() + 1 +'-'+ d.getDate()
 let travelTo = {
   todayDate: today,
 }
+
 //functionality for posting a trip with additional warnings if not all forms done
 const submitHandler = (event) => {
   event.preventDefault()
@@ -58,20 +59,24 @@ const submitHandler = (event) => {
   }))
   let daysAway = Client.tillDeparture(departing, today)
 }
+
 // it resets the search if user not satisfied with the outcome
 const resetForm = (event) => {
   document.getElementById('popup').remove()
 }
+
 // it sends the travelTo object to the server and updates the site
 // Used a full address due to dev server running on 8080
 const postToServer = (event) => {
   postData('http://localhost:8010/addEntry', travelTo)
+  .then(updateTrips('http://localhost:8010/all'))
+    document.getElementById('popup').remove()
 }
 
 const toC = (tempF) => (tempF - 32) * 1.8
 
+// posting to server function
 const postData = async (url = '', data = {}) => {
-  console.log(data)
   // fetch data
   const response = await fetch (url, {
     method: 'POST',
@@ -83,11 +88,26 @@ const postData = async (url = '', data = {}) => {
   })
   try {
     const newData = await response.json();
-    console.log(newData)
     return newData
   } catch (error) {
       console.log('error', error)
     }
 }
+
+// getting data from Server
+const updateTrips = async (url = '') => {
+  const request = await fetch (url)
+  try {
+    const allData = await request.json();
+    for (let i = 0; i < allData.length; i++) {
+      Client.buildTrips(allData[i], today)
+    }
+  }catch (error) {
+    console.log('error', error)
+  }
+}
+
+const pageBody = document.getElementsByTagName('body')
+pageBody.onload = updateTrips('http://localhost:8010/all')
 
 export { submitHandler, resetForm, postToServer }

@@ -33,9 +33,19 @@ section:nth-child(2) {
     padding: 1em;
     margin: 1em;
     img {
+      margin: auto;
       width: 100%;
     }
+    .wthicon {
+      width: 30px;
+      float: right;
+    }
     .header-saved-trip {
+      background-size: contain;
+      background-position: center;
+      background-color: $prim-col-xxlight;
+      background-repeat: no-repeat;
+      background-blend-mode: overlay;
       font-weight: 700;
       border-bottom: 1px solid $thr-col-light;
       margin: 0.5em;
@@ -62,10 +72,16 @@ section:nth-child(2) {
     }
     .days-away {
       font-size: 0.9em;
-      margin-bottom: 1.3em;
+      margin-top: 0;
+      margin-bottom: 0.5em;
     }
     .trip-weather {
+      margin-top: 0;
       font-size: 0.9em;
+    }
+    .details {
+      line-height: 1.2em;
+      text-align: justify;
     }
   }
 }

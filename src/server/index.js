@@ -28,7 +28,7 @@ app.post('/addEntry', addEntry);
 //function that stores data
 function addEntry(req,res) {
   savedTrips.push(req.body);
-  console.log(req.body);
+  console.log(savedTrips);
 }
 
 module.exports = server;
