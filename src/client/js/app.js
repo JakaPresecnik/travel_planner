@@ -57,9 +57,31 @@ const pixabayImage = async(place) => {
   }
 }
 
+// getting country details from Rest country
+const countryDetails = async(country) => {
+  const res = await fetch ('https://restcountries.eu/rest/v2/name/' + country)
+  try {
+    const data = await res.json()
+    const details = {
+      full_name: data[0].name,
+      region: data[0].region,
+      subregion: data[0].subregion,
+      population: data[0].population,
+      capital: data[0].capital,
+      flag_URL: data[0].flag,
+      language: data[0].languages[0].name,
+      currency: data[0].currencies[0].name
+    }
+    return details
+  }catch (error) {
+    console.log('error', error)
+  }
+}
+
 export {
   getPlaces,
   darkSkyWeather,
   pixabayImage,
-  tillDeparture
+  tillDeparture,
+  countryDetails
  }

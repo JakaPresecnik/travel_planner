@@ -41,6 +41,6 @@ I started from scratch so I am making a temp readme to help me with steps I need
 - [x] create an object on the server that will hold data
 
 ### Part 6
-- [ ] make an API call to Rest Countries
-- [ ] send data (including Rest API data) to server function
+- [x] make an API call to Rest Countries
+- [x] send data (including Rest API data) to server function
 - [ ] get the data already stored to the clent side (update DOM)

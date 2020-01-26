@@ -1,5 +1,5 @@
 import swal from 'sweetalert'
-import { getPlaces, darkSkyWeather, pixabayImage, tillDeparture } from './app'
+import { getPlaces, darkSkyWeather, pixabayImage, tillDeparture, countryDetails } from './app'
 import { createPopup } from './manipulatingDOM'
 
 let d = new Date()
@@ -9,6 +9,7 @@ let today = d.getFullYear() +'-'+ d.getMonth() + 1 +'-'+ d.getDate()
 let travelTo = {
   todayDate: today,
 }
+//functionality for posting a trip with additional warnings if not all forms done
 const submitHandler = (event) => {
   event.preventDefault()
   let destination = document.getElementById('destination').value
@@ -42,7 +43,10 @@ const submitHandler = (event) => {
   .then((data) => {
     travelTo.city = data.toponymName
     travelTo.country = data.countryName
-
+    Client.countryDetails(data.countryName)
+    .then((data) => {
+      travelTo.details = data
+    })
     Client.darkSkyWeather(data.lat, data.lng, leaveDate)
     .then((data) => {
       travelTo.tempHigh = Math.round(toC(data.temperatureHigh))
@@ -50,16 +54,40 @@ const submitHandler = (event) => {
       travelTo.weather = data.summary
       travelTo.weatherIcon = `./src/client/img/${data.icon}.svg`
       createPopup(travelTo, daysAway)
-      console.log(travelTo)
     })
   }))
   let daysAway = Client.tillDeparture(departing, today)
 }
-
+// it resets the search if user not satisfied with the outcome
 const resetForm = (event) => {
   document.getElementById('popup').remove()
+}
+// it sends the travelTo object to the server and updates the site
+// Used a full address due to dev server running on 8080
+const postToServer = (event) => {
+  postData('http://localhost:8010/addEntry', travelTo)
 }
 
 const toC = (tempF) => (tempF - 32) * 1.8
 
-export { submitHandler, resetForm }
+const postData = async (url = '', data = {}) => {
+  console.log(data)
+  // fetch data
+  const response = await fetch (url, {
+    method: 'POST',
+    credentials: 'same-origin',
+    headers: {
+      'content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  })
+  try {
+    const newData = await response.json();
+    console.log(newData)
+    return newData
+  } catch (error) {
+      console.log('error', error)
+    }
+}
+
+export { submitHandler, resetForm, postToServer }
