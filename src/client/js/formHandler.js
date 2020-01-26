@@ -100,10 +100,8 @@ const removeTrip = (event) => {
   console.log('works')
   let buttonList = document.getElementsByClassName('remove')
   for (let i = 0; i < buttonList.length; i++) {
-    buttonList[i].onclick = function(){
       postData('http://localhost:8010/remove', {index: i})
-      .then(data => updateTrips('http://localhost:8010/all'))
-    }
+      .then(buttonList[i].parentElement.parentElement.remove())
   }
 }
 

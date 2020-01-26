@@ -34,7 +34,7 @@ function addEntry(req,res) {
 //removes entry
 function removeEntry(req,res) {
   savedTrips.splice(req.body.index, 1);
-  console.log(req.body.index);
+  console.log(savedTrips);
 }
 
 app.get('/all', (req, res) => res.send(savedTrips));

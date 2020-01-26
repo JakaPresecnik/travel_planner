@@ -43,4 +43,3 @@ I started from scratch so I am making a temp readme to help me with steps I need
 - [x] send data (including Rest API data) to server function
 - [x] get the data already stored to the clent side (update DOM)
 - [x] add a 'remove trip' functionality
-- [ ] install service workers
