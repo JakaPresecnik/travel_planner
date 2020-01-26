@@ -87,6 +87,9 @@
     "img tw"
     "dt dt";
     align-content: space-between;
+    .details {
+      grid-area: dt;
+    }
     p {
       margin: 8px;
     }

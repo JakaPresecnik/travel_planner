@@ -95,14 +95,14 @@ const postData = async (url = '', data = {}) => {
 }
 
 //removing trip
+let buttonList = document.getElementsByClassName('remove')
 
-const removeTrip = (event) => {
-  console.log('works')
-  let buttonList = document.getElementsByClassName('remove')
-  for (let i = 0; i < buttonList.length; i++) {
-      postData('http://localhost:8010/remove', {index: i})
-      .then(buttonList[i].parentElement.parentElement.remove())
-  }
+// This function removesthe entries first on the server-side, then on client side
+// I did both, because it wasn't updating with flow - it needed to be refreshed, or had to click 2 times to get it done
+const removeTrip = (e) => {
+  let i = Array.prototype.indexOf.call(buttonList, e.currentTarget)
+  postData('http://localhost:8010/remove', {index: i})
+  e.currentTarget.parentElement.parentElement.remove()
 }
 
 // getting data from Server
