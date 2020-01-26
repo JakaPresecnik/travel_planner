@@ -29,7 +29,7 @@ app.post('/remove', removeEntry);
 //function that stores data
 function addEntry(req,res) {
   savedTrips.push(req.body);
-  console.log(savedTrips);
+  res.send(savedTrips);
 }
 //removes entry
 function removeEntry(req,res) {
