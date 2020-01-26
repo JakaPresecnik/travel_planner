@@ -94,6 +94,19 @@ const postData = async (url = '', data = {}) => {
     }
 }
 
+//removing trip
+
+const removeTrip = (event) => {
+  console.log('works')
+  let buttonList = document.getElementsByClassName('remove')
+  for (let i = 0; i < buttonList.length; i++) {
+    buttonList[i].onclick = function(){
+      postData('http://localhost:8010/remove', {i})
+      .then(updateTrips('http://localhost:8010/all'))
+    }
+  }
+}
+
 // getting data from Server
 const updateTrips = async (url = '') => {
   const request = await fetch (url)
@@ -110,4 +123,4 @@ const updateTrips = async (url = '') => {
 const pageBody = document.getElementsByTagName('body')
 pageBody.onload = updateTrips('http://localhost:8010/all')
 
-export { submitHandler, resetForm, postToServer }
+export { submitHandler, resetForm, postToServer, removeTrip }

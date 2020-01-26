@@ -42,3 +42,8 @@ I started from scratch so I am making a temp readme to help me with steps I need
 - [x] make an API call to Rest Countries
 - [x] send data (including Rest API data) to server function
 - [x] get the data already stored to the clent side (update DOM)
+
+### Part 6
+- [x] add a 'remove trip' functionality
+- [ ] add a packing list button and form
+- [ ] install service workers
