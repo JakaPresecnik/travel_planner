@@ -2,13 +2,19 @@ import './styles/styles.scss';
 import './styles/section.scss';
 import './styles/small.scss';
 
-import { getPlaces, darkSkyWeather, pixabayImage, tillDeparture } from './js/app'
-import { submitHandler } from './js/formHandler'
+import { getPlaces, darkSkyWeather, pixabayImage, tillDeparture, countryDetails } from './js/app'
+import { submitHandler, resetForm, postToServer } from './js/formHandler'
+import { createPopup, buildTrips } from './js/manipulatingDOM'
 
 export {
   getPlaces,
   darkSkyWeather,
   submitHandler,
   pixabayImage,
-  tillDeparture
+  tillDeparture,
+  createPopup,
+  resetForm,
+  countryDetails,
+  buildTrips,
+  postToServer
  }

@@ -1,12 +1,13 @@
 @media only screen and (min-width: 600px) and (max-width: 899px) {
-  .saved {
+  .saved, #popup{
     display: grid;
     grid-template-columns: 3fr 2fr;
-    grid-template-rows: 2fr 1fr 1fr 2fr;
+    grid-template-rows: 2fr 1fr 1fr;
     grid-template-areas: "img hst"
     "img btn"
     "img da"
-    "img tw";
+    "img tw"
+    "dt dt";
     align-content: space-between;
     p {
       margin: 8px;
@@ -14,6 +15,10 @@
     img {
       grid-area: img;
     }
+  }
+  .details {
+    grid-area: dt;
+    text-align: justify;
   }
 }
 
@@ -62,6 +67,12 @@
     h2 {
       grid-area: 1/span 2;
     }
+  }
+  #popup {
+    top: 40%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
   }
 }
 

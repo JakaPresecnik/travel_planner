@@ -33,9 +33,12 @@ I started from scratch so I am making a temp readme to help me with steps I need
 - [x] create API call to Pixabay
 
 ### Part 5
-- [ ] test all API calls
-- [ ] create an object that holds the data we want
-- [ ] make a function that builds UI for the trip we submited
-- [ ] create an object on the server that will hold data
-- [ ] send data to server function
-- [ ] get the data already stored to our html
+- [x] test all three API calls
+- [x] create an object that holds the data we want
+- [x] greate a weather icon function and add the url to object (integrated once user saves the trip to server)
+- [x] make a function that builds UI for the trip we submited
+- [x] make a function that resets our submission
+- [x] create an object on the server that will hold data
+- [x] make an API call to Rest Countries
+- [x] send data (including Rest API data) to server function
+- [x] get the data already stored to the clent side (update DOM)
