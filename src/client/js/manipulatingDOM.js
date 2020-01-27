@@ -52,7 +52,7 @@ const buildTrips = (savedObject, dayToday) => {
       ${savedObject.weather}</em></p>
     </div>
     <div class="details">
-      <p><strong>${savedObject.details.full_name}</strong> is located in ${savedObject.region}, more specifically ${savedObject.details.subregion}, with a population of ${savedObject.details.population}. Its capital is ${savedObject.details.capital}, language is ${savedObject.details.language} and currency used in the country is ${savedObject.details.currency}.</p>
+      <p><strong>${savedObject.details.full_name}</strong> is located in ${savedObject.details.region}, more specifically ${savedObject.details.subregion}, with a population of ${savedObject.details.population}. Its capital is ${savedObject.details.capital}, language is ${savedObject.details.language} and currency used in the country is ${savedObject.details.currency}.</p>
     </div>
 
   `

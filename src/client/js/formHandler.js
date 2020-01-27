@@ -68,6 +68,7 @@ const resetForm = (event) => {
 // it sends the travelTo object to the server and updates the site
 // Used a full address due to dev server running on 8080
 const postToServer = (event) => {
+  console.log(travelTo)
   postData('http://localhost:8010/addEntry', travelTo)
   .then(data => updateTrips('http://localhost:8010/all'))
     document.getElementById('popup').remove()
