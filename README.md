@@ -12,6 +12,7 @@ To run it clone the project, then opend a terminal and:
 - Run `npm i`
 - Run` npm run start`,  This will start the server on your local computer...
 - Then open another terminal, `cd` into the folder
-- And run `npm run build-dev`
+- Run `npm run build-prod`
+- And `npm run build-dev`
 
 If you have trouble with cors you should install Moesif cors plugin for your browser

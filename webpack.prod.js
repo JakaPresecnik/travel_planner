@@ -8,7 +8,7 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 
 module.exports = {
   mode: 'production',
-  entry: ['babel/polyfill', './src/client/index.js'],
+  entry: './src/client/index.js',
   output: {
     libraryTarget: 'var',
     library: 'Client'
