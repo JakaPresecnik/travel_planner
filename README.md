@@ -1,46 +1,17 @@
-# Udacity-FEND-Capstone
-Capstone project for udacity's fend nanodegree
-I started from scratch so I am making a temp readme to help me with steps I need to take to finish the project:
+# TRAVEL PLANER
 
-### Part 1:
-- [x] Make a complete html file (including the part thet is not seen before submitting the form)
-- [x] Create package.json file('npm init')
-- [x] Build server (& install express, body-parser and cors)
-- [x] Install webpack
-- [x] Install babel
-- [x] Install html-webpack-plugin, webpack-dev-server and clean-webpack-plugin
+## About
+This is the final project for Udacity's Front end developer nanodegree. I had no starter code, the project was done from scratch.
 
-### Part 2:
-- [x] Install jest and supertest, and make a `__tests__` folder and a sample test
-- [x] Test the server
-- [x] make a favicon.ico to get rid of error (favicon.cc)
-- [x] Install style-loader, node-sass, css-loader, sass-loader
-- [x] Decide on fonts(google.fonts) and colors(paletton) and create variables in sass file
-- [x] Style the entire page for mobile onto higher devices
-- [x] Comment out content that is visible only when user submits to API
+The app gets the city entered by the user, and then sends the request to pixabay API and geonames API, from where it sends the required data to darkSkyWeb API and REST countries API. A window pops up and if the user wants to save the trip, all the required data is then send to server and UI is updated.
 
-### Part 3
-- [x] Install CSS extract plugin
-- [x] Install service workers
-- [x] Minify CSS and HTML in production
-- [x] Make a event listener function in formHandler file
+## How to use:
 
-### Part 4
-- [x] Install sweetalert (https://sweetalert.js.org/)
-- [x] create API call to geonames
-- [x] create a day-counter function (days till trip & trip length)
-- [x] create API call to DarkSky
-- [x] create API call to Pixabay
+To run it clone the project, then opend a terminal and:
+- `cd` into the folder of the project
+- Run `npm i`
+- Run` npm run start`,  This will start the server on your local computer...
+- Then open another terminal, `cd` into the folder
+- And run `npm run build-dev`
 
-### Part 5
-- [x] test all three API calls
-- [x] create an object that holds the data we want
-- [x] greate a weather icon function and add the url to object (integrated once user saves the trip to server)
-- [x] make a function that builds UI for the trip we submited
-- [x] make a function that resets our submission
-- [x] create an object on the server that will hold data
-- [x] make an API call to Rest Countries
-- [x] send data (including Rest API data) to server function
-- [x] get the data already stored to the clent side (update DOM)
-- [x] add a 'remove trip' functionality
-- [ ] install service workers
+If you have trouble with cors you should install Moesif cors plugin for your browser

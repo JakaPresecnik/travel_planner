@@ -63,6 +63,7 @@ const submitHandler = (event) => {
 // it resets the search if user not satisfied with the outcome
 const resetForm = (event) => {
   document.getElementById('popup').remove()
+  updateTrips('http://localhost:8010/all')
 }
 
 // it sends the travelTo object to the server and updates the site
@@ -95,16 +96,33 @@ const postData = async (url = '', data = {}) => {
 }
 
 //removing trip
+let buttonList = document.getElementsByClassName('remove')
 
-const removeTrip = (event) => {
-  console.log('works')
-  let buttonList = document.getElementsByClassName('remove')
-  for (let i = 0; i < buttonList.length; i++) {
-    buttonList[i].onclick = function(){
+// This function removesthe entries first on the server-side, then on client side
+// I did both, because it wasn't updating with flow - it needed to be refreshed, or had to click 2 times to get it done
+const removeTrip = (e) => {
+  let elem = e.currentTarget
+  swal({
+    title: "Are you sure?",
+    text: "Once deleted, you will not be able to recover this!",
+    icon: "warning",
+    buttons: true,
+    dangerMode: true,
+  })
+  .then((willDelete) => {
+    if (willDelete) {
+      //remove functionality
+      let i = Array.prototype.indexOf.call(buttonList, e.currentTarget)
       postData('http://localhost:8010/remove', {index: i})
-      .then(data => updateTrips('http://localhost:8010/all'))
+      elem.parentElement.parentElement.remove()
+
+      swal("The trip has been deleted!", {
+        icon: "success",
+      });
+    } else {
+      swal("The trip is safe!");
     }
-  }
+  })
 }
 
 // getting data from Server
