@@ -4,7 +4,8 @@ import { createPopup, buildTrips } from './manipulatingDOM'
 
 let d = new Date()
 let today = d.getFullYear() +'-'+ (d.getMonth() + 1) +'-'+ d.getDate()
-console.log(today)
+
+const toC = (tempF) => {return (tempF - 32) / 1.8}
 
 //created an object that will store the data on the client side, and have a method for calculating days
 let travelTo = {
@@ -51,10 +52,10 @@ const submitHandler = (event) => {
     })
     Client.darkSkyWeather(data.lat, data.lng, leaveDate)
     .then((data) => {
-      travelTo.tempHigh = Math.round(toC(data.temperatureHigh))
-      travelTo.tempLow = Math.round(toC(data.temperatureLow))
-      travelTo.weather = data.summary
-      travelTo.weatherIcon = `./src/client/img/${data.icon}.svg`
+      travelTo.tempHigh = Math.round(toC(data[0].temperatureHigh))
+      travelTo.tempLow = Math.round(toC(data[0].temperatureLow))
+      travelTo.weather = data[0].summary
+      travelTo.weatherIcon = `./src/client/img/${data[0].icon}.svg`
       createPopup(travelTo, daysAway)
     })
   }))
@@ -74,8 +75,6 @@ const postToServer = (event) => {
   .then(data => updateTrips('http://localhost:8010/all'))
     document.getElementById('popup').remove()
 }
-
-const toC = (tempF) => (tempF - 32) * 1.8
 
 // posting to server function
 const postData = async (url = '', data = {}) => {

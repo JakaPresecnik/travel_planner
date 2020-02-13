@@ -83,6 +83,15 @@ section:nth-child(2) {
       line-height: 1.2em;
       text-align: justify;
     }
+    .details_btn {
+      height: 1em;
+      position: relative;
+      top: 0.4em;
+    }
+    .details_btn i {
+      position: relative;
+      top: -0.5em;
+    }
   }
 }
 

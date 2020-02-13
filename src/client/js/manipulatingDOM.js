@@ -47,7 +47,7 @@ const buildTrips = (savedObject, dayToday) => {
       <p>You are staying there ${daysLasts} days</p>
     </div>
     <div class="trip-weather">
-      <p>Typical weather for then is: <img class="wthicon" src="${savedObject.weatherIcon}" alt=""></p>
+      <p>Typical weather for then is: <button class="details_btn" onclick= "return Client.weatherDetails(event)"><i class="fa fa-caret-down" aria-hidden="true"></i></button><img class="wthicon" src="${savedObject.weatherIcon}" alt=""></p>
       <p><em>High temperature: ${savedObject.tempHigh} &#176;C, Low temperature: ${savedObject.tempLow} &#176;C <br>
       ${savedObject.weather}</em></p>
     </div>
