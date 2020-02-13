@@ -92,6 +92,12 @@ section:nth-child(2) {
       position: relative;
       top: -0.5em;
     }
+    .remove {
+      background-color: #b44;
+      &:hover {
+        background-color: red;
+      }
+    }
   }
 }
 
