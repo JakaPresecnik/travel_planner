@@ -31,7 +31,7 @@ const tillDeparture = (leavingDate, today) => {
   }else if(daysDifference === 0) {
     swal('Hey!', 'Your trip starts today!', 'warning')
   }else {
-    return daysDifference
+    return Math.round(daysDifference)
   }
 }
 

@@ -3,7 +3,8 @@ import { getPlaces, darkSkyWeather, pixabayImage, tillDeparture, countryDetails 
 import { createPopup, buildTrips } from './manipulatingDOM'
 
 let d = new Date()
-let today = d.getFullYear() +'-'+ d.getMonth() + 1 +'-'+ d.getDate()
+let today = d.getFullYear() +'-'+ (d.getMonth() + 1) +'-'+ d.getDate()
+console.log(today)
 
 //created an object that will store the data on the client side, and have a method for calculating days
 let travelTo = {
