@@ -40,7 +40,8 @@ const buildTrips = (savedObject, dayToday) => {
       <p>Returning: ${savedObject.returnDate}</p>
     </div>
     <div class="buttons">
-      <button class="remove" onclick="return Client.removeTrip(event)" >remove trip</button>
+      <button class="remove" onclick="return Client.removeTrip(event)" >remove</button>
+      <button class="tosee" onclick="return Client.additionalTrips(event)">visit places</button>
     </div>
     <div class="days-away">
       <p>Trip is ${daysAway} days away</p>

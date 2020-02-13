@@ -43,3 +43,14 @@ I started from scratch so I am making a temp readme to help me with steps I need
 - [x] send data (including Rest API data) to server function
 - [x] get the data already stored to the clent side (update DOM)
 - [x] add a 'remove trip' functionality
+
+### Post-integrad
+- [x] start with additional trips functionality
+- [ ] make async functions to get the needed data
+- [ ] update DOM
+- [x] start the details for hourly and daily weather at location
+- [ ] rebuild the getweather function so it gets weather for 3 days
+- [ ] update DOM
+- [ ] make a loop on the server side that arrange the trips according to time
+- [ ] make a function on server side that puts expired trips to another object
+- [ ] on client side add styling for trips that are over
