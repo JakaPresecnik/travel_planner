@@ -45,6 +45,7 @@ I started from scratch so I am making a temp readme to help me with steps I need
 - [x] add a 'remove trip' functionality
 
 ### Post-integrad
+- [ ] BUY A BIGGER SCREEN!!!!
 - [x] start with additional trips functionality
 - [ ] make async functions to get the needed data
 - [ ] update DOM
