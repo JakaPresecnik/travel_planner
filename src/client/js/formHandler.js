@@ -112,7 +112,8 @@ const removeTrip = (e) => {
   .then((willDelete) => {
     if (willDelete) {
       //remove functionality
-      let i = Array.prototype.indexOf.call(buttonList, e.currentTarget)
+      let i = Array.prototype.indexOf.call(buttonList, elem)
+      console.log(i)
       postData('http://localhost:8010/remove', {index: i})
       elem.parentElement.parentElement.remove()
 
