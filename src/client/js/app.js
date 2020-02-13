@@ -31,7 +31,7 @@ const tillDeparture = (leavingDate, today) => {
   }else if(daysDifference === 0) {
     swal('Hey!', 'Your trip starts today!', 'warning')
   }else {
-    return daysDifference
+    return Math.round(daysDifference)
   }
 }
 
@@ -40,7 +40,7 @@ const darkSkyWeather = async(lat, lng, time) => {
   const res = await fetch (darkskyUrl+darkskyApiKey+lat+','+lng+','+time)
   try {
     const data = await res.json()
-    return data.daily.data[0]
+    return data.daily.data
   }catch (error) {
     console.log('error', error)
   }
