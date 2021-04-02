@@ -139,7 +139,11 @@ const updateTrips = async (url = '') => {
   }
 }
 
+const additionalTrips = (e) => {
+  swal("Not Implemeted Yet!");
+}
+
 const pageBody = document.getElementsByTagName('body')
 pageBody.onload = updateTrips('http://localhost:8010/all')
 
-export { submitHandler, resetForm, postToServer, removeTrip }
+export { submitHandler, resetForm, postToServer, removeTrip, additionalTrips }

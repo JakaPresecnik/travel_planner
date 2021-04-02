@@ -55,7 +55,7 @@
     "style-loader": "^1.1.2",
     "supertest": "^4.0.2",
     "terser-webpack-plugin": "^2.3.1",
-    "webpack-dev-server": "^3.10.1",
+    "webpack-dev-server": "^3.11.2",
     "workbox-webpack-plugin": "^4.3.1"
   },
   "jest": {

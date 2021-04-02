@@ -3,7 +3,7 @@ import './styles/section.scss';
 import './styles/small.scss';
 
 import { getPlaces, darkSkyWeather, pixabayImage, tillDeparture, countryDetails } from './js/app'
-import { submitHandler, resetForm, postToServer, removeTrip } from './js/formHandler'
+import { submitHandler, resetForm, postToServer, removeTrip, additionalTrips } from './js/formHandler'
 import { createPopup, buildTrips } from './js/manipulatingDOM'
 
 export {
@@ -17,5 +17,6 @@ export {
   countryDetails,
   buildTrips,
   postToServer,
-  removeTrip
+  removeTrip,
+  additionalTrips
  }
